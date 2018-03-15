@@ -49,22 +49,6 @@ public class Directorio extends JFrame {
         pBarraBuscar = new javax.swing.JPanel();
         lBuscar = new javax.swing.JLabel();
         tfBuscar = new javax.swing.JTextField();
-        pNuevoContacto = new javax.swing.JPanel();
-        lNuevoContactoNC = new javax.swing.JLabel();
-        tfNombreNC = new javax.swing.JTextField();
-        lTelefonoNC = new javax.swing.JLabel();
-        tfTelefonoNC = new javax.swing.JTextField();
-        lCorreoNC = new javax.swing.JLabel();
-        tfCorreoNC = new javax.swing.JTextField();
-        lFechaNC = new javax.swing.JLabel();
-        lDireccionNC = new javax.swing.JLabel();
-        tfDireccionNC = new javax.swing.JTextField();
-        lNombreNC = new javax.swing.JLabel();
-        lCancelarNC = new javax.swing.JLabel();
-        lGuardarNC = new javax.swing.JLabel();
-        lGuardarIconNC = new javax.swing.JLabel();
-        dcFechaNC = new com.toedter.calendar.JDateChooser();
-        lCancelarIconNC1 = new javax.swing.JLabel();
         pConsultarContacto = new javax.swing.JPanel();
         lNombreContactoCC = new javax.swing.JLabel();
         tfNombreCC = new javax.swing.JTextField();
@@ -74,7 +58,6 @@ public class Directorio extends JFrame {
         tfCorreoCC = new javax.swing.JTextField();
         lFechaCC = new javax.swing.JLabel();
         lDireccionCC = new javax.swing.JLabel();
-        tfDireccionCC = new javax.swing.JTextField();
         lEliminarCC = new javax.swing.JLabel();
         lCancelarCC = new javax.swing.JLabel();
         lModificarCC = new javax.swing.JLabel();
@@ -84,6 +67,25 @@ public class Directorio extends JFrame {
         lDiasFaltantesCC = new javax.swing.JLabel();
         dcFechaCC = new com.toedter.calendar.JDateChooser();
         lCancelarIconCC1 = new javax.swing.JLabel();
+        spTextArea = new javax.swing.JScrollPane();
+        taDireccionCC = new javax.swing.JTextArea();
+        pNuevoContacto = new javax.swing.JPanel();
+        lNuevoContactoNC = new javax.swing.JLabel();
+        tfNombreNC = new javax.swing.JTextField();
+        lTelefonoNC = new javax.swing.JLabel();
+        tfTelefonoNC = new javax.swing.JTextField();
+        lCorreoNC = new javax.swing.JLabel();
+        tfCorreoNC = new javax.swing.JTextField();
+        lFechaNC = new javax.swing.JLabel();
+        lDireccionNC = new javax.swing.JLabel();
+        lNombreNC = new javax.swing.JLabel();
+        lCancelarNC = new javax.swing.JLabel();
+        lGuardarNC = new javax.swing.JLabel();
+        lGuardarIconNC = new javax.swing.JLabel();
+        dcFechaNC = new com.toedter.calendar.JDateChooser();
+        lCancelarIconNC1 = new javax.swing.JLabel();
+        spTextArea1 = new javax.swing.JScrollPane();
+        taDireccionNC = new javax.swing.JTextArea();
         pNoSeleccion = new javax.swing.JPanel();
         pListaContactos = new javax.swing.JPanel();
         lNuevoContactoicon = new javax.swing.JLabel();
@@ -118,96 +120,7 @@ public class Directorio extends JFrame {
 
         getContentPane().add(pBarraBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 60));
 
-        pNuevoContacto.setBackground(new java.awt.Color(204, 204, 204));
-        pNuevoContacto.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        lNuevoContactoNC.setFont(new java.awt.Font("Futura", 1, 30)); // NOI18N
-        lNuevoContactoNC.setText("Nuevo contacto");
-        pNuevoContacto.add(lNuevoContactoNC, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
-
-        tfNombreNC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
-        tfNombreNC.setBorder(null);
-        tfNombreNC.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                tfNombreNCKeyTyped(evt);
-            }
-        });
-        pNuevoContacto.add(tfNombreNC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 510, -1));
-
-        lTelefonoNC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
-        lTelefonoNC.setText("Telefono");
-        pNuevoContacto.add(lTelefonoNC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
-
-        tfTelefonoNC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
-        tfTelefonoNC.setBorder(null);
-        tfTelefonoNC.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                tfTelefonoNCKeyTyped(evt);
-            }
-        });
-        pNuevoContacto.add(tfTelefonoNC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 510, -1));
-
-        lCorreoNC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
-        lCorreoNC.setText("Correo electronico");
-        pNuevoContacto.add(lCorreoNC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
-
-        tfCorreoNC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
-        tfCorreoNC.setBorder(null);
-        pNuevoContacto.add(tfCorreoNC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 510, -1));
-
-        lFechaNC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
-        lFechaNC.setText("Fecha de nacimiento");
-        pNuevoContacto.add(lFechaNC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, -1));
-
-        lDireccionNC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
-        lDireccionNC.setText("Direccion");
-        pNuevoContacto.add(lDireccionNC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, -1, -1));
-
-        tfDireccionNC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
-        tfDireccionNC.setBorder(null);
-        pNuevoContacto.add(tfDireccionNC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 510, 70));
-
-        lNombreNC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
-        lNombreNC.setText("Nombre");
-        pNuevoContacto.add(lNombreNC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
-
-        lCancelarNC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
-        lCancelarNC.setForeground(new java.awt.Color(255, 255, 255));
-        lCancelarNC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lCancelarNC.setText("Cancelar");
-        lCancelarNC.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lCancelarNCMouseClicked(evt);
-            }
-        });
-        pNuevoContacto.add(lCancelarNC, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, 90, 30));
-
-        lGuardarNC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
-        lGuardarNC.setForeground(new java.awt.Color(255, 255, 255));
-        lGuardarNC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lGuardarNC.setText("Guardar");
-        lGuardarNC.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lGuardarNCMouseClicked(evt);
-            }
-        });
-        pNuevoContacto.add(lGuardarNC, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 30, 90, 30));
-
-        lGuardarIconNC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
-        lGuardarIconNC.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Button OK.png"))); // NOI18N
-        pNuevoContacto.add(lGuardarIconNC, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, -1, -1));
-
-        dcFechaNC.setBackground(new java.awt.Color(243, 243, 243));
-        dcFechaNC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
-        pNuevoContacto.add(dcFechaNC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 500, -1));
-
-        lCancelarIconNC1.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
-        lCancelarIconNC1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Button Cancel.png"))); // NOI18N
-        pNuevoContacto.add(lCancelarIconNC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 20, -1, -1));
-
-        getContentPane().add(pNuevoContacto, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 50, 620, 630));
-
-        pConsultarContacto.setBackground(new java.awt.Color(243, 243, 243));
+        pConsultarContacto.setBackground(new java.awt.Color(204, 204, 204));
         pConsultarContacto.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lNombreContactoCC.setFont(new java.awt.Font("Futura", 1, 30)); // NOI18N
@@ -215,31 +128,34 @@ public class Directorio extends JFrame {
         pConsultarContacto.add(lNombreContactoCC, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
 
         tfNombreCC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        tfNombreCC.setBorder(null);
         tfNombreCC.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 tfNombreCCKeyTyped(evt);
             }
         });
-        pConsultarContacto.add(tfNombreCC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 510, -1));
+        pConsultarContacto.add(tfNombreCC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 510, 30));
 
         lTelefonoCC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
         lTelefonoCC.setText("Telefono");
-        pConsultarContacto.add(lTelefonoCC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
+        pConsultarContacto.add(lTelefonoCC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
 
         tfTelefonoCC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        tfTelefonoCC.setBorder(null);
         tfTelefonoCC.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 tfTelefonoCCKeyTyped(evt);
             }
         });
-        pConsultarContacto.add(tfTelefonoCC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 510, -1));
+        pConsultarContacto.add(tfTelefonoCC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 510, 30));
 
         lCorreoCC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
         lCorreoCC.setText("Correo electronico");
-        pConsultarContacto.add(lCorreoCC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
+        pConsultarContacto.add(lCorreoCC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, -1, -1));
 
         tfCorreoCC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
-        pConsultarContacto.add(tfCorreoCC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 510, -1));
+        tfCorreoCC.setBorder(null);
+        pConsultarContacto.add(tfCorreoCC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 510, 30));
 
         lFechaCC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
         lFechaCC.setText("Fecha de nacimiento");
@@ -248,9 +164,6 @@ public class Directorio extends JFrame {
         lDireccionCC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
         lDireccionCC.setText("Direccion");
         pConsultarContacto.add(lDireccionCC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, -1, -1));
-
-        tfDireccionCC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
-        pConsultarContacto.add(tfDireccionCC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 510, 70));
 
         lEliminarCC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
         lEliminarCC.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Button Trash.png"))); // NOI18N
@@ -289,7 +202,7 @@ public class Directorio extends JFrame {
 
         lNombreCC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
         lNombreCC.setText("Nombre");
-        pConsultarContacto.add(lNombreCC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
+        pConsultarContacto.add(lNombreCC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
 
         lDiasCumpleaños.setBackground(new java.awt.Color(255, 255, 255));
         lDiasCumpleaños.setFont(new java.awt.Font("Futura", 1, 14)); // NOI18N
@@ -302,6 +215,7 @@ public class Directorio extends JFrame {
         lDiasFaltantesCC.setText("18");
         pConsultarContacto.add(lDiasFaltantesCC, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, -1, -1));
 
+        dcFechaCC.setBackground(new java.awt.Color(204, 204, 204));
         dcFechaCC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
         pConsultarContacto.add(dcFechaCC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 500, -1));
 
@@ -309,9 +223,112 @@ public class Directorio extends JFrame {
         lCancelarIconCC1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Button Cancel.png"))); // NOI18N
         pConsultarContacto.add(lCancelarIconCC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 460, -1, -1));
 
+        spTextArea.setBorder(null);
+
+        taDireccionCC.setColumns(20);
+        taDireccionCC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        taDireccionCC.setRows(5);
+        spTextArea.setViewportView(taDireccionCC);
+
+        pConsultarContacto.add(spTextArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 510, 70));
+
         getContentPane().add(pConsultarContacto, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 50, 620, 630));
 
-        pNoSeleccion.setBackground(new java.awt.Color(243, 243, 243));
+        pNuevoContacto.setBackground(new java.awt.Color(204, 204, 204));
+        pNuevoContacto.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lNuevoContactoNC.setFont(new java.awt.Font("Futura", 1, 30)); // NOI18N
+        lNuevoContactoNC.setText("Nuevo contacto");
+        pNuevoContacto.add(lNuevoContactoNC, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
+
+        tfNombreNC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        tfNombreNC.setBorder(null);
+        tfNombreNC.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                tfNombreNCKeyTyped(evt);
+            }
+        });
+        pNuevoContacto.add(tfNombreNC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 135, 510, 30));
+
+        lTelefonoNC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        lTelefonoNC.setText("Telefono");
+        pNuevoContacto.add(lTelefonoNC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
+
+        tfTelefonoNC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        tfTelefonoNC.setBorder(null);
+        tfTelefonoNC.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                tfTelefonoNCKeyTyped(evt);
+            }
+        });
+        pNuevoContacto.add(tfTelefonoNC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 510, 30));
+
+        lCorreoNC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        lCorreoNC.setText("Correo electronico");
+        pNuevoContacto.add(lCorreoNC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
+
+        tfCorreoNC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        tfCorreoNC.setBorder(null);
+        pNuevoContacto.add(tfCorreoNC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 510, 30));
+
+        lFechaNC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        lFechaNC.setText("Fecha de nacimiento");
+        pNuevoContacto.add(lFechaNC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, -1));
+
+        lDireccionNC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        lDireccionNC.setText("Direccion");
+        pNuevoContacto.add(lDireccionNC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, -1, -1));
+
+        lNombreNC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        lNombreNC.setText("Nombre");
+        pNuevoContacto.add(lNombreNC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
+
+        lCancelarNC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        lCancelarNC.setForeground(new java.awt.Color(255, 255, 255));
+        lCancelarNC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lCancelarNC.setText("Cancelar");
+        lCancelarNC.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lCancelarNCMouseClicked(evt);
+            }
+        });
+        pNuevoContacto.add(lCancelarNC, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, 90, 30));
+
+        lGuardarNC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        lGuardarNC.setForeground(new java.awt.Color(255, 255, 255));
+        lGuardarNC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lGuardarNC.setText("Guardar");
+        lGuardarNC.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lGuardarNCMouseClicked(evt);
+            }
+        });
+        pNuevoContacto.add(lGuardarNC, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 30, 90, 30));
+
+        lGuardarIconNC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        lGuardarIconNC.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Button OK.png"))); // NOI18N
+        pNuevoContacto.add(lGuardarIconNC, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, -1, -1));
+
+        dcFechaNC.setBackground(new java.awt.Color(204, 204, 204));
+        dcFechaNC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        pNuevoContacto.add(dcFechaNC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 500, 40));
+
+        lCancelarIconNC1.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        lCancelarIconNC1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Button Cancel.png"))); // NOI18N
+        pNuevoContacto.add(lCancelarIconNC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 20, -1, -1));
+
+        spTextArea1.setBorder(null);
+
+        taDireccionNC.setColumns(20);
+        taDireccionNC.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        taDireccionNC.setRows(5);
+        spTextArea1.setViewportView(taDireccionNC);
+
+        pNuevoContacto.add(spTextArea1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 510, 70));
+
+        getContentPane().add(pNuevoContacto, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 50, 620, 630));
+
+        pNoSeleccion.setBackground(new java.awt.Color(204, 204, 204));
 
         javax.swing.GroupLayout pNoSeleccionLayout = new javax.swing.GroupLayout(pNoSeleccion);
         pNoSeleccion.setLayout(pNoSeleccionLayout);
@@ -378,7 +395,7 @@ public class Directorio extends JFrame {
     private void lGuardarNCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lGuardarNCMouseClicked
         if(!camposIncompletosNC()){
             Contacto nc = new Contacto(tfNombreNC.getText(), tfTelefonoNC.getText(), tfCorreoNC.getText(), 
-                tfDireccionNC.getText(), dcFechaNC.getDate());
+                taDireccionNC.getText(), dcFechaNC.getDate());
             if (ContactoDAO.registrar(nc)) {
                 JOptionPane.showMessageDialog(this, "Contacto guardado correctamente");
                 this.cargarContactos(null);
@@ -427,7 +444,7 @@ public class Directorio extends JFrame {
             tfNombreCC.setText(c.getNombre());
             //txt_Apodo.setText(c.getApodo());
             tfTelefonoCC.setText(c.getTelefono());
-            tfDireccionCC.setText(c.getDireccion());
+            taDireccionCC.setText(c.getDireccion());
             tfCorreoCC.setText(c.getEmail());
             dcFechaCC.setDate(c.getFechaNacimiento());
             lNombreContactoCC.setText(c.getNombre());
@@ -463,7 +480,7 @@ public class Directorio extends JFrame {
         tfNombreCC.setText("");
         tfTelefonoCC.setText("");
         tfCorreoCC.setText("");
-        tfDireccionCC.setText("");
+        taDireccionCC.setText("");
         
     }//GEN-LAST:event_lEliminarCCMouseClicked
 
@@ -490,7 +507,7 @@ public class Directorio extends JFrame {
             if(resultado == 0){
                 int id = contactos.get(listContactos.getSelectedIndex()).getIdContacto();
                 Contacto nc = new Contacto(c.getIdContacto(), tfNombreCC.getText(), tfTelefonoCC.getText(),
-                    tfCorreoCC.getText(), tfDireccionCC.getText(), dcFechaCC.getDate());
+                    tfCorreoCC.getText(), taDireccionCC.getText(), dcFechaCC.getDate());
                 if(ContactoDAO.actualizar(nc)){
                     JOptionPane.showMessageDialog(this, "Contacto modificado correctamente");
                     this.cargarContactos(null);
@@ -512,13 +529,13 @@ public class Directorio extends JFrame {
         tfTelefonoNC.setText("");
         tfCorreoNC.setText("");
         dcFechaNC.setDate(new Date());
-        tfDireccionNC.setText("");
+        taDireccionNC.setText("");
     }//GEN-LAST:event_lNuevoContactoMousePressed
     
     private boolean camposIncompletosNC(){
         boolean camposVacios = false;
         if(tfNombreNC.getText().isEmpty() || tfTelefonoNC.getText().isEmpty() ||
-            tfCorreoNC.getText().isEmpty() || tfDireccionNC.getText().isEmpty()){
+            tfCorreoNC.getText().isEmpty() || taDireccionNC.getText().isEmpty()){
             camposVacios = true;
         }
         return camposVacios;
@@ -527,7 +544,7 @@ public class Directorio extends JFrame {
     private boolean camposIncompletosCC(){
         boolean camposVacios = false;
         if(tfNombreCC.getText().isEmpty() || tfTelefonoCC.getText().isEmpty() ||
-            tfCorreoCC.getText().isEmpty() || tfDireccionCC.getText().isEmpty()){
+            tfCorreoCC.getText().isEmpty() || taDireccionCC.getText().isEmpty()){
             camposVacios = true;
         }
         return camposVacios;
@@ -559,12 +576,7 @@ public class Directorio extends JFrame {
          */
         
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(Directorio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
@@ -621,11 +633,13 @@ public class Directorio extends JFrame {
     private javax.swing.JPanel pNoSeleccion;
     private javax.swing.JPanel pNuevoContacto;
     private javax.swing.JScrollPane spContactos;
+    private javax.swing.JScrollPane spTextArea;
+    private javax.swing.JScrollPane spTextArea1;
+    private javax.swing.JTextArea taDireccionCC;
+    private javax.swing.JTextArea taDireccionNC;
     private javax.swing.JTextField tfBuscar;
     private javax.swing.JTextField tfCorreoCC;
     private javax.swing.JTextField tfCorreoNC;
-    private javax.swing.JTextField tfDireccionCC;
-    private javax.swing.JTextField tfDireccionNC;
     private javax.swing.JTextField tfNombreCC;
     private javax.swing.JTextField tfNombreNC;
     private javax.swing.JTextField tfTelefonoCC;
