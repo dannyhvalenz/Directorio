@@ -118,7 +118,7 @@ public class Directorio extends JFrame {
 
         getContentPane().add(pBarraBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 60));
 
-        pNuevoContacto.setBackground(new java.awt.Color(243, 243, 243));
+        pNuevoContacto.setBackground(new java.awt.Color(204, 204, 204));
         pNuevoContacto.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lNuevoContactoNC.setFont(new java.awt.Font("Futura", 1, 30)); // NOI18N
@@ -451,12 +451,20 @@ public class Directorio extends JFrame {
         if (resultado == 0) {
             int id = (contactos.get(listContactos.getSelectedIndex()).getIdContacto());
             if (ContactoDAO.eliminar(id)) {
-                //JOptionPane.showMessageDialog(this, "Contacto eliminado");
                 this.cargarContactos(null);
             } else {
                 JOptionPane.showMessageDialog(this, "No se puedo eliminar el contacto");
             }
         }
+        pNoSeleccion.setVisible(true);
+        pNuevoContacto.setVisible(false);
+        pConsultarContacto.setVisible(false);
+        
+        tfNombreCC.setText("");
+        tfTelefonoCC.setText("");
+        tfCorreoCC.setText("");
+        tfDireccionCC.setText("");
+        
     }//GEN-LAST:event_lEliminarCCMouseClicked
 
     private void lBuscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lBuscarMouseClicked
@@ -481,8 +489,8 @@ public class Directorio extends JFrame {
             Contacto c = contactos.get(listContactos.getSelectedIndex());
             if(resultado == 0){
                 int id = contactos.get(listContactos.getSelectedIndex()).getIdContacto();
-                Contacto nc = new Contacto(c.getIdContacto(), lNombreCC.getText(), lTelefonoCC.getText(),
-                    lCorreoCC.getText(), lDireccionCC.getText(), dcFechaCC.getDate());
+                Contacto nc = new Contacto(c.getIdContacto(), tfNombreCC.getText(), tfTelefonoCC.getText(),
+                    tfCorreoCC.getText(), tfDireccionCC.getText(), dcFechaCC.getDate());
                 if(ContactoDAO.actualizar(nc)){
                     JOptionPane.showMessageDialog(this, "Contacto modificado correctamente");
                     this.cargarContactos(null);
